@@ -18,3 +18,9 @@ alias wow='rspec -fd | lolcat'
 alias bundlol='bundle | lolcat'
 alias hissy_fit='echo "I can'\''t work under these conditions" | lolcat; sleep 1;sudo shutdown -h now'
 alias j=z
+alias rubys='ruby -rwebrick -e"WEBrick::HTTPServer.new(:Port => 8000,
+:DocumentRoot => Dir.pwd).start"'
+alias sicp='racket -i -p neil/sicp -l xrepl'
+rake() { if [ -f bin/rake ]; then bin/rake "$@"; else bundle exec rake "$@"; fi }
+rails() { if [ -f bin/rails ]; then bin/rails "$@"; else bundle exec rails "$@"; fi }
+

@@ -62,12 +62,12 @@ set spelllang=en_gb
 " will use completion if not at beginning
 set wildmode=list:longest,list:full
 function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
@@ -88,9 +88,9 @@ augroup vimrcEx
   " Don't do it for commit messages, when the position is invalid, or when
   " inside an event handler (happens when dropping a file on gvim).
   autocmd BufReadPost *
-    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
+        \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
 
   " Cucumber navigation commands
   autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
@@ -119,6 +119,13 @@ if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
 
+  " bind K to grep word under cursor
+  nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+  " bind \ (backward slash) to grep shortcut
+  "command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+  "nnoremap \ :Ag<SPACE>
+
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
@@ -141,19 +148,19 @@ set splitbelow
 set splitright
 
 " Open the Rails ApiDock page for the word under cursor, using the 'open'
-  " command
+" command
 let g:browser = 'open '
 
 function! OpenRailsDoc(keyword)
-let url = 'http://apidock.com/rails/'.a:keyword
-exec '!'.g:browser.' '.url
+  let url = 'http://apidock.com/rails/'.a:keyword
+  exec '!'.g:browser.' '.url
 endfunction
 
 " Open the Ruby ApiDock page for the word under cursor, using the 'open'
 " command
 function! OpenRubyDoc(keyword)
-let url = 'http://apidock.com/ruby/'.a:keyword
-exec '!'.g:browser.' '.url
+  let url = 'http://apidock.com/ruby/'.a:keyword
+  exec '!'.g:browser.' '.url
 endfunction
 
 " NERDTree
@@ -164,7 +171,7 @@ let NERDTreeHighlightCursorline = 1
 let NERDTreeShowHidden = 1
 " map enter to activating a node
 let NERDTreeMapActivateNode='<CR>'
-  let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam']
+let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam']
 
 "" Shortcuts!!
 
@@ -199,7 +206,9 @@ nmap * *Nzz
 nmap # #nzz
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
-nnoremap Y y$
+"nnoremap Y y$
+" Capital Y yanks to clipboard
+noremap Y "+y
 
 " Easily lookup documentation on apidock
 noremap <leader>rb :call OpenRubyDoc(expand('<cword>'))<CR>
@@ -251,7 +260,6 @@ inoremap jj <ESC>:wa<CR>
 
 "save and run last command
 nnoremap <CR> :wa<CR>:!!<CR>
-noremap <C-j> <ESC>:wa<CR>:!!<CR>
 
 "open vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
@@ -276,6 +284,8 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " Easymotion
+nmap <Space> <Plug>(easymotion-prefix)
+vmap <Space> <Plug>(easymotion-prefix)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
@@ -307,4 +317,29 @@ inoremap <Up> Use k
 inoremap <Down> Use j
 
 " Autoformat
-map <Leader>f :Autoformat<CR>
+nnoremap <Leader>f :Autoformat<CR>
+
+" Convert to ruby 1.9 hash
+nnoremap <Leader>H :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>
+
+nnoremap <leader>q <C-w>q
+nnoremap <leader>w :StripWhitespace<CR>
+map zx :wqa<CR>
+
+" Toggle paste mode
+nnoremap <leader>p :set invpaste paste?<CR>
+imap <leader>p <C-O>:set invpaste paste?<CR>
+set pastetoggle=<leader>p
+
+" Move up and down by visual line
+nnoremap j gj
+nnoremap k gk
+
+" Relative line number toggle
+let g:NumberToggleTrigger="<leader>r"
+
+" Pomodoro
+nmap <leader>T :!thyme -d<CR><CR>
+
+nmap <S-Enter> O<Esc>j
+nmap <CR> o<Esc>k
