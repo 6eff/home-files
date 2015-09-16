@@ -25,3 +25,5 @@
   push-ci = !sh -c '
 [fetch]
   prune = true
+[credential]
+	helper = osxkeychain
