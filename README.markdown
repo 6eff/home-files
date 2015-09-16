@@ -12,6 +12,12 @@ Next, use the homesick command to clone this repository:
 
     homesick clone git://github.com/pitchinvasion/home-files.git
 
+And install/update the submodules
+   
+    cd home-files
+    git submodule init
+    git submodule update
+
 you can now link its contents into your home dir:
 
     homesick symlink home-files
