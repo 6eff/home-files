@@ -308,14 +308,14 @@ nnoremap <Leader>i gg=G``
 nnoremap == gg=G``
 
 " Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-inoremap <Left> Use h
-inoremap <Right> Use l
-inoremap <Up> Use k
-inoremap <Down> Use j
+"nnoremap <Left> :echoe "Use h"<CR>
+"nnoremap <Right> :echoe "Use l"<CR>
+"nnoremap <Up> :echoe "Use k"<CR>
+"nnoremap <Down> :echoe "Use j"<CR>
+"inoremap <Left> Use h
+"inoremap <Right> Use l
+"inoremap <Up> Use k
+"inoremap <Down> Use j
 
 " Autoformat
 nnoremap <Leader>f :Autoformat<CR>
@@ -343,4 +343,8 @@ let g:NumberToggleTrigger="<leader>r"
 nmap <leader>T :!thyme -d<CR><CR>
 
 nmap <S-Enter> O<Esc>j
-nmap <CR> o<Esc>k
+"nmap <CR> o<Esc>k
+
+" Hard times
+"let g:hardtime_default_on = 1
+nnoremap <leader>h :HardTimeToggle<CR>
