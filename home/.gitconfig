@@ -1,6 +1,8 @@
 [user]
   name = Leo Allen
   email = leo.f.allen@gmail.com
+[pull]
+  default = current
 [push]
   default = simple
 [core]
