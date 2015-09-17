@@ -9,7 +9,8 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-colorscheme jellybeans
+colorscheme gruvbox
+set background=dark
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup

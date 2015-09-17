@@ -1,11 +1,11 @@
 [user]
-    name = Leo Allen
-    email = leo.f.allen@gmail.com
+  name = Leo Allen
+  email = leo.f.allen@gmail.com
 [push]
-    default = simple
+  default = simple
 [core]
-    excludesfile = ~/.gitignore_global
-    editor = vim
+  excludesfile = ~/.gitignore_global
+  editor =  "NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 [color]
   ui = auto
 [alias]
@@ -93,4 +93,4 @@
 [fetch]
   prune = true
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain

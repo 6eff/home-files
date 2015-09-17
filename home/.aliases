@@ -23,4 +23,6 @@ alias rubys='ruby -rwebrick -e"WEBrick::HTTPServer.new(:Port => 8000,
 alias sicp='racket -i -p neil/sicp -l xrepl'
 rake() { if [ -f bin/rake ]; then bin/rake "$@"; else bundle exec rake "$@"; fi }
 rails() { if [ -f bin/rails ]; then bin/rails "$@"; else bundle exec rails "$@"; fi }
-
+alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+alias vi='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
