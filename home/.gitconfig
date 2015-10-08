@@ -7,7 +7,7 @@
   default = simple
 [core]
   excludesfile = ~/.gitignore_global
-  editor =  "NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
+  editor = vim
 [color]
   ui = auto
 [alias]
@@ -16,7 +16,7 @@
   ca = !git add . && git commit --amend
   ci = commit -v
   co = checkout
-  ac = !git add . && git commit
+  a = !git add . && git commit
   co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
   cb = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -

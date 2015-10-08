@@ -96,3 +96,4 @@ source ~/.aliases
 # source ~/.vim/bundle/tmux-config/tmux-autowrite/autowrite-vim.sh
 #
 bindkey '^R' history-incremental-search-backward
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"

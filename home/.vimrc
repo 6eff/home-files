@@ -200,6 +200,11 @@ map! <F1> <Esc>
 " <leader>F to begin searching with ag
 map <leader>F :Ag<space>
 
+" Use Ag with capital K
+":xnoremap  K y:<c-u>Ag <C-R>=shellescape(expand(@"),1)<CR>:copen<CR>
+":nnoremap  K :<c-u>Ag <c-r>=shellescape(expand("<cword>"),1)<cr>:copen<cr>
+
+
 " search next/previous -- center in page
 nmap n nzz
 nmap N Nzz
@@ -265,8 +270,8 @@ nnoremap <CR> :wa<CR>:!!<CR>
 "open vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
-" source vimrc
-nnoremap <leader>es :so $MYVIMRC
+" source vimr
+nnoremap <leader>vs :so $MYVIMRC<CR> :echo ".vimrc sourced :-)"<CR>
 
 "make ctrl-c work with vim on a mac
 vnoremap <C-c> :w !pbcopy<CR><CR> noremap <C-v> :r !pbpaste<CR><CR>
@@ -346,5 +351,19 @@ nmap <S-Enter> O<Esc>j
 "nmap <CR> o<Esc>k
 
 " Hard times
-"let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 nnoremap <leader>h :HardTimeToggle<CR>
+let g:hardtime_timeout = 900
+let g:hardtime_showmsg = 1
+let g:hardtime_maxcount = 2
+
+" Run feature tests
+nnoremap <leader>f :!clear && echo "Running all feature tests" && rspec features<CR>
+
+nnoremap <leader>S :so $MYVIMRC <CR>:echo "Vimrc has been reloaded"<CR>
+
+" Convert html to haml
+nmap <leader><leader>h :%!html2haml --erb 2> /dev/null<CR>:set ft=haml<CR>
+vmap <leader><leader>h :!html2haml --erb 2> /dev/null<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
+

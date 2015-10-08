@@ -25,5 +25,5 @@ rake() { if [ -f bin/rake ]; then bin/rake "$@"; else bundle exec rake "$@"; fi 
 rails() { if [ -f bin/rails ]; then bin/rails "$@"; else bundle exec rails "$@"; fi }
 rspec() { if [ -f bin/rspec ]; then bin/rspec "$@"; else bundle exec rspec "$@"; fi }
 alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-alias vi='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+alias ip='ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -f 2 -d " "'
+alias pair='ta pair || ts pair'
