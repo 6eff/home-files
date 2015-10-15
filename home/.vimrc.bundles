@@ -64,10 +64,11 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'takac/vim-hardtime'
+Plugin 'takac/vim-hartime'
 Plugin 'morhetz/gruvbox'
 Plugin 'gilgigilgil/anderson.vim'
 Plugin 'suan/vim-instant-markdown'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 filetype on
