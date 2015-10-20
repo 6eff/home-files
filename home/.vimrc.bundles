@@ -29,12 +29,9 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
-" Plugin 'vim-scripts/tComment'
 
 " Auto align
-" Plugin 'vim-scripts/vimball'
-" Plugin 'vim-scripts/Align'
-" Plugin 'vim-scripts/AutoAlign'
+Plugin 'godlygeek/tabular'
 
 " Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
