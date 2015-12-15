@@ -29,6 +29,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'compactcode/alternate'
 
 " Auto align
 Plugin 'godlygeek/tabular'
@@ -54,6 +55,7 @@ Plugin 'scrooloose/nerdcommenter'
 " Tmux
 Plugin 'pivotal/tmux-config'
 
+Plugin 'jodosha/vim-greenbar'
 Plugin 'danro/rename.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'yssl/QFEnter'

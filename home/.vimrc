@@ -323,7 +323,7 @@ nnoremap == gg=G``
 "inoremap <Down> Use j
 
 " Autoformat
-nnoremap <Leader>f :Autoformat<CR>
+"nnoremap <Leader>f :Autoformat<CR>
 
 " Convert to ruby 1.9 hash
 nnoremap <Leader>H :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>
@@ -351,7 +351,7 @@ nmap <S-Enter> O<Esc>j
 "nmap <CR> o<Esc>k
 
 " Hard times
-let g:hardtime_default_on = 0
+let g:hardtime_default_on = 1
 nnoremap <leader>h :HardTimeToggle<CR>
 let g:hardtime_timeout = 900
 let g:hardtime_showmsg = 1
@@ -367,3 +367,12 @@ nmap <leader><leader>h :%!html2haml --erb 2> /dev/null<CR>:set ft=haml<CR>
 vmap <leader><leader>h :!html2haml --erb 2> /dev/null<CR>
 nnoremap <leader>n :NERDTreeFind<CR>
 
+" Automatically run a file
+function! RunWith (command)
+  execute "w"
+  execute "!clear; " . a:command . " " . expand("%")
+endfunction
+
+autocmd FileType ruby nnoremap <leader>q :call RunWith("ruby")<CR>
+autocmd FileType javascript nnoremap <leader>q :call RunWith("node")<CR>
+autocmd FileType python nnoremap <leader>q :call RunWith("python")<CR>
