@@ -30,7 +30,7 @@ Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'compactcode/open.vim'
-Plugin 'compactcode/alternate'
+Plugin 'compactcode/alternate.vim'
 
 " Auto align
 Plugin 'godlygeek/tabular'
