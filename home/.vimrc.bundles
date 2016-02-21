@@ -11,14 +11,12 @@ Plugin 'gmarik/Vundle.vim'
 
 " Define bundles via Github repos
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'christoomey/vim-run-interactive'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'pbrisbin/vim-mkdir'
+
 Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-abolish'
+
 Plugin 'tpope/vim-endwise'
+" Unix helpers like Remove, Rename, only tpope knows why he called it this
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
@@ -27,19 +25,13 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'jtratner/vim-flavored-markdown'
-Plugin 'vim-scripts/ctags.vim'
-Plugin 'vim-scripts/matchit.zip'
+
+" Open spec files
 Plugin 'compactcode/open.vim'
 Plugin 'compactcode/alternate.vim'
 
 " Auto align
 Plugin 'godlygeek/tabular'
-
-" Snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
 
 Plugin 'pangloss/vim-javascript'
 
@@ -47,7 +39,6 @@ Plugin 'rking/ag.vim'
 
 " Nice status bar
 Plugin 'bling/vim-airline'
-Plugin 'airblade/vim-gitgutter'
 
 Plugin 'roman/golden-ratio'
 Plugin 'scrooloose/nerdtree'
@@ -56,19 +47,20 @@ Plugin 'scrooloose/nerdcommenter'
 " Tmux
 Plugin 'pivotal/tmux-config'
 
-Plugin 'danro/rename.vim'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'yssl/QFEnter'
 Plugin 'sjl/vitality.vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'takac/vim-hardtime'
+
+"Plugin 'mustache/vim-mustache-handlebars'
+"Plugin 'takac/vim-hardtime'
 Plugin 'morhetz/gruvbox'
-Plugin 'gilgigilgil/anderson.vim'
+"Plugin 'gilgigilgil/anderson.vim'
 Plugin 'suan/vim-instant-markdown'
-Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/emmet-vim'
+Plugin 'osyo-manga/vim-over'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
 filetype on

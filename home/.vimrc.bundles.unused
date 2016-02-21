@@ -1,0 +1,16 @@
+" Allows you to use your zsh aliases and git config
+Plugin 'christoomey/vim-run-interactive'
+
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-abolish'
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'vim-scripts/matchit.zip'
+
+" Snipmate
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'danro/rename.vim'
+Plugin 'Lokaltog/vim-easymotion'
