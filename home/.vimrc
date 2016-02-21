@@ -270,9 +270,6 @@ nnoremap <CR> :wa<CR>:!!<CR>
 "open vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
-" source vimr
-nnoremap <leader>vs :so $MYVIMRC<CR> :echo ".vimrc sourced :-)"<CR>
-
 "make ctrl-c work with vim on a mac
 vnoremap <C-c> :w !pbcopy<CR><CR> noremap <C-v> :r !pbpaste<CR><CR>
 
@@ -360,7 +357,7 @@ let g:hardtime_maxcount = 2
 " Run feature tests
 nnoremap <leader>f :!clear && echo "Running all feature tests" && rspec features<CR>
 
-nnoremap <leader>S :so $MYVIMRC <CR>:echo "Vimrc has been reloaded"<CR>
+nnoremap <leader>S :so $MYVIMRC <CR>:VundleInstall <CR>:q <CR> :echo "Vimrc has been reloaded"<CR>
 
 " Convert html to haml
 nmap <leader><leader>h :%!html2haml --erb 2> /dev/null<CR>:set ft=haml<CR>
