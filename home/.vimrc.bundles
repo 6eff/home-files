@@ -61,6 +61,8 @@ Plugin 'suan/vim-instant-markdown'
 "Plugin 'mattn/emmet-vim'
 Plugin 'osyo-manga/vim-over'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'xero/sourcerer.vim'
+Plugin 'kien/rainbow_parentheses.vim'
 
 call vundle#end()
 filetype on
