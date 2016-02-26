@@ -1,3 +1,4 @@
+alias git='hub'
 alias ll='ls -al'
 alias cdh='cd ~/.homesick/repos/home-files/home'
 alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc && cd - && clear'
