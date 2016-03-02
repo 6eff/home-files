@@ -133,9 +133,9 @@ endif
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 " configure syntastic syntax checking to check on open as well as save
-let g:syntastic_check_on_open=1
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+"let g:syntastic_check_on_open=1
+"let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+"let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
 
 let g:ctrlp_extensions = ['tag']
@@ -260,6 +260,7 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 " Indentation
 nnoremap == gg=G``
+nnoremap <Leader>i gg=G``
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
