@@ -63,6 +63,7 @@ Plugin 'osyo-manga/vim-over'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'xero/sourcerer.vim'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'jreybert/vimagit'
 
 call vundle#end()
 filetype on

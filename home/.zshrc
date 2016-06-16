@@ -192,3 +192,4 @@ endfn
 
 
 # ^^^ END makersinit SCRIPT ^^^
+export PATH="/usr/local/sbin:$PATH"
