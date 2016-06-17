@@ -10,6 +10,8 @@ To install run
 
 ```
 curl https://raw.githubusercontent.com/pitchinvasion/home-files/master/install.sh | sh
+```
+
 
 and restart your terminal.
 
