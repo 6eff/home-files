@@ -1,0 +1,26 @@
+#!/bin/sh
+
+brew bundle --file=- <<EOF
+tap "caskroom/cask"
+brew "watch"
+brew "antigen"
+brew "vim"
+tap "neovim/neovim"
+brew "neovim"
+cask "google-chrome"
+cask "iterm2"
+cask "alfred"
+cask "slack"
+cask "evernote"
+cask "spotify"
+EOF
+
+
+echo "Cleaning up old Homebrew formulae ..."
+brew cleanup
+brew cask cleanup
+
+if [ -r "$HOME/.rcrc" ]; then
+  echo "Updating dotfiles ..."
+  rcup
+fi
