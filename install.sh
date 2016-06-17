@@ -1,9 +1,9 @@
 #!/bin/sh
 
-echo "Installing thoughtbot's laptop config"
-curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
-sh mac 2>&1 | tee ~/laptop.log
-
+# You may want to setup your computer using Thoughtbot's laptop
+# https://github.com/thoughtbot/laptop
+#
+# curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac | sh
 echo "Installing homefiles"
 gem install homesick
 homesick clone git://github.com/pitchinvasion/home-files.git
