@@ -11,6 +11,6 @@ sudo gem install homesick
 echo "Installing homefiles"
 homesick clone https://github.com/pitchinvasion/home-files.git
 cd home-files
-homesick symlink -f home-files
+homesick link home-files --force
 homesick rc home-files
 echo "Done!"
