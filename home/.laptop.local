@@ -13,6 +13,7 @@ cask "alfred"
 cask "slack"
 cask "evernote"
 cask "spotify"
+cask "atom"
 EOF
 
 
