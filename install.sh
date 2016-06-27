@@ -6,7 +6,7 @@
 # curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac | sh
 echo "Installing homefiles"
 gem install homesick
-homesick clone git://github.com/pitchinvasion/home-files.git
+homesick clone https://github.com/pitchinvasion/home-files.git
 cd home-files
 git submodule init
 git submodule update
