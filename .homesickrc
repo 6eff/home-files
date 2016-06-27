@@ -12,6 +12,8 @@ puts "Setting up zsh"
 `sh install_zsh.sh`
 puts "Done!"
 
-puts "Installing tmux"
-`brew install tmux`
-`brew install reattach-to-user-namespace`
+puts "Installing homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+puts "Installing mac files"
+curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac | sh
