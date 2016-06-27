@@ -8,8 +8,6 @@ echo "Installing homefiles"
 gem install homesick
 homesick clone https://github.com/pitchinvasion/home-files.git
 cd home-files
-git submodule init
-git submodule update
 homesick symlink home-files
 homesick rc home-files
 
