@@ -12,5 +12,5 @@ echo "Installing homefiles"
 homesick clone https://github.com/pitchinvasion/home-files.git
 cd home-files
 homesick link home-files --force
-homesick rc home-files
+homesick rc home-files --force
 echo "Done!"
