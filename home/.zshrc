@@ -41,8 +41,8 @@ bindkey '^R' history-incremental-search-backward
 # source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 export PATH="/usr/local/sbin:$PATH"
-source $(brew --prefix)/share/antigen.zsh
-
+source /Users/julia/antigen.zsh
+# source /Users/julia/antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle git
