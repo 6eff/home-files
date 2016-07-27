@@ -56,8 +56,7 @@ antigen bundle osx
 antigen bundle history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-antigen theme af-magic
-
+antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 antigen apply
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
